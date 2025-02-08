@@ -19,12 +19,7 @@
         <div class="container-fluid d-flex justify-content-center align-items-center">
             <a class="navbar-brand" href="#" style="color: white">Roadmap Generator</a>
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="https://www.paypal.com/paypalme/angelhandal03" target="_blank" style="color: white">
-                        <img src="paypal.png" alt="PayPal" width="50" style="margin-right: 5px;">
-                        <strong>Donate</strong>
-                    </a>
-                </li>
+                
             </ul>
         </div>
     </nav>
@@ -62,9 +57,24 @@
         </div>
     </div>
 
-    <footer class="mt-5">
-        <p>Developed by Angel Handal</p>
-    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Function to get URL parameters
+            function getParameterByName(name) {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(name);
+            }
+        
+            // Get the role parameter from the URL
+            const selectedRole = getParameterByName("role");
+        
+            if (selectedRole) {
+                const roleDropdown = document.getElementById("roles");
+                roleDropdown.value = selectedRole; // Set the dropdown value
+            }
+        });
+        </script>
+        
 
 </body>
 </html>
